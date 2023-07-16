@@ -153,14 +153,14 @@ resource "aws_elastic_beanstalk_application_version_lifecycle_policy" "fslwill" 
 }
 
 # AWS Elastic Beanstalk Environment Update Trigger
-resource "aws_elastic_beanstalk_environment" "fslwill_update_trigger" {
-  name         = "fslwill_update_trigger"
-  application  = aws_elastic_beanstalk_application.fslwill.name
-  environment  = aws_elastic_beanstalk_environment.devel.id
-  trigger_name = "fslwill_trigger"
+#resource "aws_elastic_beanstalk_environment" "fslwill_update_trigger" {
+# name         = "fslwill_update_trigger"
+#  application  = aws_elastic_beanstalk_application.fslwill.name
+#  environment  = aws_elastic_beanstalk_environment.devel.id
+#  trigger_name = "fslwill_trigger"
 
-  provisioner {
-    action = "pause"
-    type   = "pre_traffic"
-  }
-}
+#  provisioner {
+#    action = "pause"
+#    type   = "pre_traffic"
+#  }
+#}
